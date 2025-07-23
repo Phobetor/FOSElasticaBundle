@@ -1,6 +1,6 @@
 <?php
 
-namespace FOS\ElasticaBundle\Tests\Resetter\DependencyInjection;
+namespace FOS\ElasticaBundle\Tests\DependencyInjection;
 
 use FOS\ElasticaBundle\DependencyInjection\Configuration;
 use Symfony\Component\Config\Definition\Processor;

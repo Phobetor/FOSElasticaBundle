@@ -266,24 +266,3 @@ abstract class ListenerTest extends \PHPUnit_Framework_TestCase
         return $mock;
     }
 }
-
-namespace FOS\ElasticaBundle\Tests\Doctrine\Listener;
-
-class Entity
-{
-    private $id;
-    public $identifier;
-
-    /**
-     * @param integer $id
-     */
-    public function __construct($id)
-    {
-        $this->id = $id;
-    }
-
-    public function getId()
-    {
-        return $this->id;
-    }
-}

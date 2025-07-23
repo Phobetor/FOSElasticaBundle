@@ -6,29 +6,6 @@ use FOS\ElasticaBundle\Persister\ObjectPersister;
 use FOS\ElasticaBundle\Transformer\ModelToElasticaAutoTransformer;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
-class POPO
-{
-    public $id   = 123;
-
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function getName()
-    {
-        return 'popoName';
-    }
-}
-
-class InvalidObjectPersister extends ObjectPersister
-{
-    public function transformToElasticaDocument($object)
-    {
-        throw new \BadMethodCallException('Invalid transformation');
-    }
-}
-
 class ObjectPersisterTest extends \PHPUnit_Framework_TestCase
 {
     public function testThatCanReplaceObject()

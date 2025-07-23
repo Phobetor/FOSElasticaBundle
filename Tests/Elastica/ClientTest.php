@@ -1,6 +1,6 @@
 <?php
 
-namespace FOS\ElasticaBundle\Tests\Client;
+namespace FOS\ElasticaBundle\Tests\Elastica;
 
 use Elastica\Request;
 use Elastica\Transport\NullTransport;
