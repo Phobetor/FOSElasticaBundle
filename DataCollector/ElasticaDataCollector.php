@@ -69,4 +69,10 @@ class ElasticaDataCollector extends DataCollector
     {
         return 'elastica';
     }
+
+    public function reset(): void
+    {
+        $this->logger->reset();
+        $this->data = [];
+    }
 }
