@@ -198,10 +198,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('types');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('types');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('types');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -299,10 +299,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('properties');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('properties');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('properties');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -320,10 +320,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('dynamic_templates');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('dynamic_templates');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('dynamic_templates');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -356,10 +356,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_id');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_id');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_id');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -378,10 +378,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_source');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_source');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_source');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -410,10 +410,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_boost');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_boost');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_boost');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -433,10 +433,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_routing');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_routing');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_routing');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -456,10 +456,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_parent');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_parent');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_parent');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -480,10 +480,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_all');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_all');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_all');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -504,10 +504,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_timestamp');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_timestamp');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_timestamp');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -530,10 +530,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('_ttl');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('_ttl');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('_ttl');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -555,10 +555,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('persistence');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('persistence');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('persistence');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
@@ -668,10 +668,10 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder('serializer');
         // Keep compatibility with symfony/config < 4.2
-        if (!method_exists($treeBuilder, 'getRootNode')) {
-            $node = $treeBuilder->root('serializer');
+        if (!method_exists($builder, 'getRootNode')) {
+            $node = $builder->root('serializer');
         } else {
-            $node = $treeBuilder->getRootNode();
+            $node = $builder->getRootNode();
         }
 
         $node
