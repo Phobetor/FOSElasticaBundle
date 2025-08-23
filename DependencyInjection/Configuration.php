@@ -34,8 +34,13 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('fos_elastica', 'array');
+        $treeBuilder = new TreeBuilder('fos_elastica');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->root('fos_elastica');
+        } else {
+            $rootNode = $treeBuilder->getRootNode();
+        }
 
         $this->addClientsSection($rootNode);
         $this->addIndexesSection($rootNode);
