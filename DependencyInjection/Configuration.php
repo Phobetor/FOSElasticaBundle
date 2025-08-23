@@ -196,8 +196,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getTypesNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('types');
+        $builder = new TreeBuilder('types');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('types');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->useAttributeAsKey('name')
@@ -292,8 +297,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getPropertiesNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('properties');
+        $builder = new TreeBuilder('properties');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('properties');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->useAttributeAsKey('name')
@@ -308,8 +318,13 @@ class Configuration implements ConfigurationInterface
      */
     public function getDynamicTemplateNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('dynamic_templates');
+        $builder = new TreeBuilder('dynamic_templates');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('dynamic_templates');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->prototype('array')
@@ -339,8 +354,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getIdNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_id');
+        $builder = new TreeBuilder('_id');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_id');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -356,8 +376,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getSourceNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_source');
+        $builder = new TreeBuilder('_source');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_source');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -383,8 +408,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getBoostNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_boost');
+        $builder = new TreeBuilder('_boost');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_boost');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -401,8 +431,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getRoutingNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_routing');
+        $builder = new TreeBuilder('_routing');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_routing');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -419,8 +454,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getParentNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_parent');
+        $builder = new TreeBuilder('_parent');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_parent');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -438,8 +478,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getAllNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_all');
+        $builder = new TreeBuilder('_all');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_all');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -457,8 +502,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getTimestampNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_timestamp');
+        $builder = new TreeBuilder('_timestamp');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_timestamp');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -478,8 +528,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getTtlNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('_ttl');
+        $builder = new TreeBuilder('_ttl');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('_ttl');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->children()
@@ -498,8 +553,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getPersistenceNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('persistence');
+        $builder = new TreeBuilder('persistence');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('persistence');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->beforeNormalization()
@@ -606,8 +666,13 @@ class Configuration implements ConfigurationInterface
      */
     protected function getSerializerNode()
     {
-        $builder = new TreeBuilder();
-        $node = $builder->root('serializer');
+        $builder = new TreeBuilder('serializer');
+        // Keep compatibility with symfony/config < 4.2
+        if (!method_exists($treeBuilder, 'getRootNode')) {
+            $node = $treeBuilder->root('serializer');
+        } else {
+            $node = $treeBuilder->getRootNode();
+        }
 
         $node
             ->addDefaultsIfNotSet()
