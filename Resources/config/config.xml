@@ -29,7 +29,7 @@
         </service>
 
         <service id="fos_elastica.data_collector" class="%fos_elastica.data_collector.class%">
-            <tag name="data_collector" template="FOSElasticaBundle:Collector:elastica" id="elastica" />
+            <tag name="data_collector" template="FOSElastica/Collector/elastica.html.twig" id="elastica" />
             <argument type="service" id="fos_elastica.logger" />
         </service>
 
