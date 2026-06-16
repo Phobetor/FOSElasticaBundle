@@ -2,7 +2,7 @@
 
 namespace FOS\ElasticaBundle\Paginator;
 
-use Elastica\SearchResultSet;
+use Elastica\ResultSet;
 use Elastica\Result;
 
 /**
@@ -13,9 +13,9 @@ class RawPartialResults implements PartialResultsInterface
     protected $resultSet;
 
     /**
-     * @param SearchResultSet $resultSet
+     * @param ResultSet $resultSet
      */
-    public function __construct(SearchResultSet $resultSet)
+    public function __construct(ResultSet $resultSet)
     {
         $this->resultSet = $resultSet;
     }

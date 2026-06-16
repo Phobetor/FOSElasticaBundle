@@ -40,7 +40,7 @@ class TransformedFinderTest extends \PHPUnit_Framework_TestCase
     private function createMockResultSet()
     {
         $resultSet = $this
-            ->getMockBuilder('Elastica\SearchResultSet')
+            ->getMockBuilder('Elastica\ResultSet')
             ->disableOriginalConstructor()
             ->setMethods(array('getResults'))
             ->getMock();
