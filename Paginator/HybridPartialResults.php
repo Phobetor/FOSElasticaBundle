@@ -3,7 +3,7 @@
 namespace FOS\ElasticaBundle\Paginator;
 
 use FOS\ElasticaBundle\Transformer\ElasticaToModelTransformerInterface;
-use Elastica\ResultSet;
+use Elastica\SearchResultSet;
 
 /**
  * Partial transformed result set
@@ -16,10 +16,10 @@ class HybridPartialResults extends RawPartialResults
     protected $transformer;
 
     /**
-     * @param ResultSet                           $resultSet
+     * @param SearchResultSet                           $resultSet
      * @param ElasticaToModelTransformerInterface $transformer
      */
-    public function __construct(ResultSet $resultSet, ElasticaToModelTransformerInterface $transformer)
+    public function __construct(SearchResultSet $resultSet, ElasticaToModelTransformerInterface $transformer)
     {
         parent::__construct($resultSet);
 
